@@ -1,0 +1,24 @@
+﻿@page
+@model VisitaDomiciliaria.App.Presentacion.Pages.DetailsModel
+@{
+}
+<h2>Datos detallados del propietario</h2>
+<div>
+    Id Persona: @Model.Propietario.idPersona
+</div>
+<div>
+    Nombres: @Model.Propietario.Nombres
+</div>
+<div>
+    Apellidos: @Model.Propietario.Apellidos
+</div>
+<div>
+    Telefono: @Model.Propietario.Telefono
+</div>
+<div>
+    Direccion: @Model.Propietario.Direccion
+</div>
+<div>
+    Correo: @Model.Propietario.Correo
+</div>
+<a asp-page="./List" class="btn-default">Volver a la lista de propietarios</a>

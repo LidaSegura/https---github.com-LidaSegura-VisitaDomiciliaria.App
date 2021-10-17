@@ -1,0 +1,49 @@
+﻿@page
+@model VisitaDomiciliaria.App.Presentacion.Pages.EditModel
+@{
+    int propietarioId=Model.Propietario.Id;
+}
+<h2>Edicion datos propietario</h2>
+<form method="post">
+    <input type="hidden" asp-for="Propietario.Id"/>
+    <div class="form-group">
+        <label asp-for="Propietario.idPersona"></label>
+        <input asp-for="Propietario.idPersona" class="form-control">
+        <span class="text-danger"asp-validation-for="Propietario.idPersona">
+        </span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Propietario.Nombres"></label>
+        <input asp-for="Propietario.Nombres" class="form-control">
+        <span class="text-danger"asp-validation-for="Propietario.Nombres">
+        </span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Propietario.Apellidos"></label>
+        <input asp-for="Propietario.Apellidos" class="form-control">
+        <span class="text-danger"asp-validation-for="Propietario.Apellidos">
+        </span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Propietario.Telefono"></label>
+        <input asp-for="Propietario.Telefono" class="form-control">
+        <span class="text-danger"asp-validation-for="Propietario.Telefono">
+        </span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Propietario.Direccion"></label>
+        <input asp-for="Propietario.Direccion" class="form-control">
+        <span class="text-danger"asp-validation-for="Propietario.Direccion">
+        </span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Propietario.Correo"></label>
+        <input asp-for="Propietario.Correo" class="form-control">
+        <span class="text-danger"asp-validation-for="Propietario.Correo">
+        </span>
+    </div>
+    <button type="submit" class="btn btn=primary">Guardar</button>
+
+</form>
+
+<a asp-page="./List" class="btn-default">Volver a la lista de propietarios</a>

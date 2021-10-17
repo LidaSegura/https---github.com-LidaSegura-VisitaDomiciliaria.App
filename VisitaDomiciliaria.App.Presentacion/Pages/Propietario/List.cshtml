@@ -1,0 +1,37 @@
+﻿@page
+@model VisitaDomiciliaria.App.Presentacion.Pages.ListModel
+@{
+}
+<h1>Listado de Propietarios</h1>
+
+<table class="table">
+
+    @foreach (var propietario in Model.Propietarios)
+    {
+        <tr>
+            <td>@propietario.Nombres</td>
+            <td>@propietario.Apellidos</td>
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./Details" asp-route-propietarioId="@propietario.Id">
+                    <i class="fas fa-info-circle fa-lg" >Consultar</i>
+                </a>
+            </td>
+            
+            <td>
+                <a clase="btn btn-primary table-btn" asp-page="./Edit" asp-route-propietarioId="@propietario.Id">
+                    <i class="fas fa-address-book fa-lg" aria-hidden="true">Editar</i>
+                </a>
+            </td>
+            <td>
+                <a clase="btn btn-primary table-btn" asp-page="./Delete" asp-route-propietarioId="@propietario.Id">
+                    <i class="fa-solid fa-arrow-right-from-braket" aria-hidden="true">Borrar</i>
+                </a>
+            </td>
+
+
+
+        </tr>    
+    }
+
+</table>
+<a asp-page=".\Edit" class="btn btn-primary">Adicionar Propietario</a>
